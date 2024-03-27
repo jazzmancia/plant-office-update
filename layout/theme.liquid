@@ -28,6 +28,15 @@
 
     {% render 'meta-tags' %}
 
+    <style>
+      .header-wrapper {
+        position: absolute !important;
+        width: 100% !important;
+        top: 0px !important;
+        background-color: transparent !important;
+      }
+    </style>
+
     <script src="{{ 'constants.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'pubsub.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
@@ -352,5 +361,11 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+
+    <style>
+      .banner__buttons .banner__buttons--multiple {
+        flex-direction: column !important;
+      }
+    </style>
   </body>
 </html>
